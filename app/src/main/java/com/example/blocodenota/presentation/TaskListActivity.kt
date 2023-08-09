@@ -13,11 +13,13 @@ import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.recyclerview.widget.RecyclerView
 import androidx.room.Room
+import com.example.blocodenota.data.AppDataBase
+import com.example.blocodenota.data.Task
+import com.example.blocodenota.presentation.TaskDetailActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers.IO
-import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
@@ -126,12 +128,12 @@ class MainActivity : AppCompatActivity() {
 
 
     //ACAO DE CLICK
-   private fun onListItemClicked(task:Task) {
+   private fun onListItemClicked(task: Task) {
        openTaskListDetail(task)
     }
 
     private fun openTaskListDetail(task: Task? ){
-        val intent=TaskDetailActivity.start(this, task)
+        val intent= TaskDetailActivity.start(this, task)
         startForResult.launch(intent)
     }
 

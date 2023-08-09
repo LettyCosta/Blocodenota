@@ -1,4 +1,4 @@
-package com.example.blocodenota
+package com.example.blocodenota.data
 
 import androidx.room.Database
 import androidx.room.RoomDatabase

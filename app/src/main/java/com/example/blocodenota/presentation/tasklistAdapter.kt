@@ -7,10 +7,11 @@ import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.example.blocodenota.data.Task
 
 class TaskListAdapter(
 
-    private val openTaskDetailView: (task:Task) -> Unit //ACAO DE CLICK
+    private val openTaskDetailView: (task: Task) -> Unit //ACAO DE CLICK
     ): ListAdapter<Task, TasklistViewHolder>(TaskListAdapter) {
 
 

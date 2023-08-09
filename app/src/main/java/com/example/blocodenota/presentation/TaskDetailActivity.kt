@@ -1,4 +1,4 @@
-package com.example.blocodenota
+package com.example.blocodenota.presentation
 
 import android.app.Activity
 import android.content.Context
@@ -11,6 +11,11 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import com.example.blocodenota.ActionType
+import com.example.blocodenota.R
+import com.example.blocodenota.TASK_ACTION_RESULT
+import com.example.blocodenota.TaskAction
+import com.example.blocodenota.data.Task
 import com.google.android.material.snackbar.Snackbar
 
 class TaskDetailActivity : AppCompatActivity() {
@@ -59,7 +64,7 @@ class TaskDetailActivity : AppCompatActivity() {
 
             if (title.isNotEmpty() && desc.isNotEmpty()) {
                 if(task == null){
-                    addOrUpdateTask(0,title, desc,ActionType.CREATE)
+                    addOrUpdateTask(0,title, desc, ActionType.CREATE)
                 }else{
                     addOrUpdateTask(task!!.id, title, desc, ActionType.UPDATE)
 
