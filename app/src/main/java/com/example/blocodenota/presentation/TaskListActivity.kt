@@ -31,11 +31,7 @@ class MainActivity : AppCompatActivity() {
     private val adapter: TaskListAdapter by lazy {
         TaskListAdapter( ::onListItemClicked) }
 
-    private val dataBase by lazy {  Room.databaseBuilder(
-        applicationContext,
-        AppDataBase::class.java, "taskbeats-database"
-    ). build()
-    }
+    lateinit var dataBase : AppDataBase
 
     private val dao by lazy { dataBase.taskDao() }
 
@@ -62,7 +58,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_task_list)
         setSupportActionBar(findViewById(R.id.toolbar))
 
-        ListFromDataBase()
+
 
         ctn_content= findViewById(R.id.ctn_content)
 
@@ -80,6 +76,17 @@ class MainActivity : AppCompatActivity() {
             openTaskListDetail(null)
         }
 
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+        dataBase = Room.databaseBuilder(
+            applicationContext,
+        AppDataBase::class.java, "blocodenota-database"
+        ).build()
+
+        ListFromDataBase()
     }
 
     private fun insertIntoDataBase(task: Task){
