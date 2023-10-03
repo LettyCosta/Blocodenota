@@ -12,23 +12,22 @@ import com.example.blocodenota.data.Task
 
 interface TaskDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insert(task: Task)
+  suspend fun insert(task: Task)
 
     @Query("Select * From task")
-    fun getAll(): LiveData<List<Task>>
+     fun getAll(): LiveData<List<Task>>
 
     //UPDATE encontrar pelo id a tarefa que queremos alterar
-
     @Update(onConflict = OnConflictStrategy.REPLACE)
-    fun update(task: Task)
+    suspend fun update(task: Task)
 
     //DELETE: encontrar por ID
 
     @Query("DELETE from task")
-    fun deleteAll()
+       suspend fun deleteAll()
 
     //DELETANDO pelo id
 
     @Query("DELETE from task WHERE id =:id ")
-    fun DeleteById(id:Int)
+     suspend fun DeleteById(id:Int)
 }
