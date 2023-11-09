@@ -1,11 +1,13 @@
 package com.example.blocodenota
 
-import com.example.blocodenota.data.local.Task
-import com.example.blocodenota.data.local.TaskDao
+import com.example.blocodenota.data.Task
+import com.example.blocodenota.data.TaskDao
 import com.example.blocodenota.presentation.ActionType
 import com.example.blocodenota.presentation.TaskAction
 import com.example.blocodenota.presentation.TaskDetailViewModel
+import com.example.blocodenota.presentation.TaskListViewModel
 import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.test.UnconfinedTestDispatcher
 import kotlinx.coroutines.test.runTest
 import org.junit.Rule
 import org.junit.Test

@@ -1,4 +1,4 @@
-package com.example.blocodenota.data.local
+package com.example.blocodenota.data
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
@@ -6,7 +6,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
-import com.example.blocodenota.data.local.Task
+import com.example.blocodenota.data.Task
 
 @Dao
 

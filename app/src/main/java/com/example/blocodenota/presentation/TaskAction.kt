@@ -1,6 +1,6 @@
 package com.example.blocodenota.presentation
 
-import com.example.blocodenota.data.local.Task
+import com.example.blocodenota.data.Task
 import java.io.Serializable
 
 enum class ActionType  {

@@ -12,7 +12,7 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.activity.viewModels
 import com.example.blocodenota.*
-import com.example.blocodenota.data.local.Task
+import com.example.blocodenota.data.Task
 import com.google.android.material.snackbar.Snackbar
 
 class TaskDetailActivity : AppCompatActivity() {

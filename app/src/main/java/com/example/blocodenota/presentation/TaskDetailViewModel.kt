@@ -5,8 +5,10 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import com.example.blocodenota.BlocodenotaApplication
-import com.example.blocodenota.data.local.Task
-import com.example.blocodenota.data.local.TaskDao
+import com.example.blocodenota.data.Task
+import com.example.blocodenota.data.TaskDao
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class TaskDetailViewModel(private val taskDao: TaskDao,
