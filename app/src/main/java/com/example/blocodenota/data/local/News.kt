@@ -1,4 +1,4 @@
-package com.example.blocodenota.data
+package com.example.blocodenota.data.local
 
 data class News(
     val Title: String,

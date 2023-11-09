@@ -4,9 +4,9 @@ import android.app.Application
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import com.example.blocodenota.BlocodenotaApplication
-import com.example.blocodenota.data.Task
-import com.example.blocodenota.data.TaskDao
-class TaskListViewModel( taskDao: TaskDao,
+import com.example.blocodenota.data.local.Task
+import com.example.blocodenota.data.local.TaskDao
+class TaskListViewModel(taskDao: TaskDao,
     ): ViewModel() {
 
 val TaskListLiveData: LiveData<List<Task>> = taskDao.getAll()

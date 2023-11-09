@@ -1,4 +1,4 @@
-package com.example.blocodenota.data
+package com.example.blocodenota.data.local
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import java.io.Serializable
