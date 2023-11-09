@@ -11,9 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import coil.transform.RoundedCornersTransformation
 import com.example.blocodenota.R
-import com.example.blocodenota.TasklistViewHolder
-import com.example.blocodenota.data.News
-import com.example.blocodenota.data.Task
+import com.example.blocodenota.data.local.News
 
 class NewsListAdapter: ListAdapter <News, NewsListViewHolder>(NewsListAdapter) {
 

@@ -2,7 +2,7 @@ package com.example.blocodenota
 
 import android.app.Application
 import androidx.room.Room
-import com.example.blocodenota.data.AppDataBase
+import com.example.blocodenota.data.local.AppDataBase
 
 class BlocodenotaApplication:Application() {
 
@@ -18,7 +18,7 @@ class BlocodenotaApplication:Application() {
 
     }
 
-    fun getAppDataBase(): AppDataBase{
+    fun getAppDataBase(): AppDataBase {
         return dataBase
     }
 }

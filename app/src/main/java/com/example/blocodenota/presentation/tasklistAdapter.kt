@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.blocodenota.data.Task
+import com.example.blocodenota.data.local.Task
 
 class TaskListAdapter(
 

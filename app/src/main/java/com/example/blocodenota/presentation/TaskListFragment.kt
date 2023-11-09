@@ -10,7 +10,12 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.RecyclerView
 import com.example.blocodenota.R
 import com.example.blocodenota.TaskListAdapter
-import com.example.blocodenota.data.Task
+import com.example.blocodenota.data.local.Task
+import com.example.blocodenota.data.remote.NewsResponse
+import com.example.blocodenota.data.remote.RetrofitModule
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 
 /**
@@ -20,6 +25,7 @@ import com.example.blocodenota.data.Task
  */
 class TaskListFragment : Fragment() {
     private lateinit var ctn_content : LinearLayout
+
 
     //ADAPTER
     private val adapter: TaskListAdapter by lazy {
@@ -49,6 +55,8 @@ class TaskListFragment : Fragment() {
         //RECYCLERVIEW    //KOTLIN,ADAPTER E RECYCLERVIEW, componentes para popular uma ui no onCreateViewHolder
         val rvtasks: RecyclerView = view.findViewById(R.id.ru_task_list)
         rvtasks.adapter = adapter
+
+
     }
 
     override fun onStart() {
@@ -72,7 +80,7 @@ class TaskListFragment : Fragment() {
         //Livedata
         viewModel.TaskListLiveData.observe(this, ListObserver)
     }
-    private fun openTaskListDetail(task: Task ){
+    private fun openTaskListDetail(task: Task){
         val intent= TaskDetailActivity.start(requireContext(), task)
         requireActivity().startActivity(intent)
     }
